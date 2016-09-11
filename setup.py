@@ -8,7 +8,7 @@ if sys.version_info < (2, 7):
     requirements.append('argparse')
 
 setup(name='hblock',
-      version='0.0.1',
+      version='0.0.2',
       description='Hostname adblocker in your System Tray',
       long_description="""HBlock is a simple adblocker for Linux application
       and lets you control ads blocking on your system tray.""",
