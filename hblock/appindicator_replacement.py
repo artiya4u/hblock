@@ -29,7 +29,7 @@ STATUS_ATTENTION = 1
 
 def get_icon_filename(icon_name):
     # Determine where the icon is
-    return os.path.abspath(resource_filename('hblock.data', 'hblock.png'))
+    return os.path.abspath(resource_filename('hblock.data', icon_name))
 
 
 # The main class

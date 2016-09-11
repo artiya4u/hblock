@@ -1,10 +1,5 @@
 HBlock
 ==========
-
-[![HBlock on PyPi](https://pypip.in/v/hblock/badge.png)](https://pypi.python.org/pypi/hblock/)
-[![HBlock on PyPi](https://pypip.in/d/hblock/badge.png)](https://pypi.python.org/pypi/hblock/)
-[![Build Status](https://travis-ci.org/artiya4u/hblock.png)](https://travis-ci.org/artiya4u/hblock)
-
 HBlock is a simple adblocker for Linux application and lets you control ads blocking on your system tray.
 
 The inspiration for this came from [StevenBlack's hosts](https://github.com/StevenBlack/hosts).
@@ -30,7 +25,7 @@ access it via:
 2. System > Preferences > Startup Applications 
 
 ###Upgrade
-The latest stable version is [![the one on PyPi](https://pypip.in/v/hblock/badge.png)](https://pypi.python.org/pypi/hblock/)
+The latest stable version is [the one on PyPi](https://pypi.python.org/pypi/hblock/)
 To upgrade, run `pip install -U hblock`.
 
 ##Features

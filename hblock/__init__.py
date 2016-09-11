@@ -26,6 +26,11 @@ class HblockApp:
     ABOUT_URL = "https://github.com/artiya4u/hblock"
 
     def __init__(self, args):
+        # create an indicator applet
+        self.ind = appindicator.Indicator("HBlock", "HBlock", appindicator.CATEGORY_APPLICATION_STATUS)
+        self.ind.set_status(appindicator.STATUS_ACTIVE)
+        self.ind.set_icon(get_icon_filename("hblock.png"))
+        
         # Load the database
         home = expanduser("~")
         host_path = home + '/.hblock.hosts'
@@ -44,11 +49,6 @@ class HblockApp:
                 self.block_state = True
         else:
             self.block_ads()
-
-        # create an indicator applet
-        self.ind = appindicator.Indicator("HBlock", "HBlock", appindicator.CATEGORY_APPLICATION_STATUS)
-        self.ind.set_status(appindicator.STATUS_ACTIVE)
-        self.ind.set_icon(get_icon_filename("hblock.png"))
 
         # create a menu
         self.menu = gtk.Menu()
@@ -75,6 +75,7 @@ class HblockApp:
             ret_value = os.system("""gksu cp ~/.hblock.hosts /etc/hosts \
             --message 'HBlock requires administrator right to start blocking ads.'""")
             if ret_value == 0:
+                self.ind.set_icon(get_icon_filename("hblock.png"))
                 self.block_state = not self.block_state
 
     def unblock_ads(self):
@@ -82,6 +83,7 @@ class HblockApp:
             --message 'HBlock requires administrator right to stop blocking ads.'""")
         if ret_value == 0:
             os.system("""rm ~/.hosts.old""")
+            self.ind.set_icon(get_icon_filename("hblock-disabled.png"))
             self.block_state = not self.block_state
 
     # ToDo: Handle keyboard interrupt properly
