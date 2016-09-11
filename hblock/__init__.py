@@ -75,7 +75,7 @@ class HblockApp:
             ret_value = os.system("""gksu cp ~/.hblock.hosts /etc/hosts \
             --message 'HBlock requires administrator right to start blocking ads.'""")
             if ret_value == 0:
-                self.ind.set_icon(get_icon_filename("hblock.png"))
+                self.ind.set_icon(get_icon_filename("hblock-enabled.png"))
                 self.block_state = not self.block_state
 
     def unblock_ads(self):

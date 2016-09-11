@@ -8,7 +8,7 @@ if sys.version_info < (2, 7):
     requirements.append('argparse')
 
 setup(name='hblock',
-      version='0.0.2',
+      version='0.0.6',
       description='Hostname adblocker in your System Tray',
       long_description="""HBlock is a simple adblocker for Linux application
       and lets you control ads blocking on your system tray.""",
@@ -19,7 +19,7 @@ setup(name='hblock',
       license='MIT',
       packages=find_packages(),
       package_data={
-          'hblock.data': ['hblock.png']
+          'hblock.data': ['hblock.png', 'hblock-enabled.png', 'hblock-disabled.png']
       },
       install_requires=[
           'requests>=2.2.1',
